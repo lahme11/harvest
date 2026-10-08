@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}Confirm your order{% endblock %}
+{% block content %}
+<div class="row justify-content-center"><div class="col-lg-6">
+  <h1 class="h3">Confirm your order</h1>
+  <div class="alert alert-info">Your items are held for <strong id="countdown" data-seconds="{{ seconds_left }}">{{ seconds_left }} seconds</strong>.</div>
+  <div class="card shadow-sm"><div class="card-body">
+    <p class="mb-1"><strong>{{ producer.name }}</strong></p>
+    <p class="text-muted">{{ slot.start|date:'l j F' }}, {{ slot.start|time:'H:i' }}–{{ slot.end|time:'H:i' }} at {{ slot.point.name }}, {{ slot.point.address }}</p>
+    <ul class="list-unstyled">{% for hold in holds %}<li class="d-flex justify-content-between"><span>{{ hold.quantity }} × {{ hold.product.name }}</span><span>{% widthratio hold.product.price 1 hold.quantity as line %}{{ hold.product.price|euro }} each</span></li>{% endfor %}</ul>
+    <p class="d-flex justify-content-between"><strong>Total to pay at collection</strong><strong>{{ total|euro }}</strong></p>
+    <form method="post">{% csrf_token %}<button class="btn btn-success w-100">Place order</button></form>
+    <a class="btn btn-link w-100" href="{% url 'orders:checkout' producer.pk %}">Choose a different slot</a>
+  </div></div>
+</div></div>
+{% endblock %}
+{% block extra_js %}
+<script>
+(() => {
+  const el = document.getElementById('countdown');
+  let left = parseInt(el.dataset.seconds, 10);
+  const tick = () => {
+    if (left <= 0) { el.textContent = 'no longer (please reserve again)'; return; }
+    el.textContent = `${Math.floor(left / 60)}:${String(left % 60).padStart(2, '0')}`;
+    left -= 1;
+    setTimeout(tick, 1000);
+  };
+  tick();
+})();
+</script>
+{% endblock %}

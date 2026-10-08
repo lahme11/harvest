@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}My subscriptions{% endblock %}
+{% block content %}
+<h1 class="h3">My veg-box subscriptions</h1>
+{% for subscription, dates in rows %}
+  <div class="card shadow-sm mb-3"><div class="card-body">
+    <div class="d-flex flex-wrap justify-content-between gap-2">
+      <div>
+        <h2 class="h5 mb-1"><a href="{{ subscription.box.get_absolute_url }}">{{ subscription.box.name }}</a>
+          <span class="badge text-bg-{% if subscription.status == 'active' %}success{% else %}warning{% endif %}">{{ subscription.get_status_display }}</span></h2>
+        <p class="text-muted mb-2">{{ subscription.box.producer.name }} · {{ subscription.rule }} at {{ subscription.rule.point.name }} · {{ subscription.box.price|euro }} {{ subscription.box.get_box_frequency_display|lower }}</p>
+      </div>
+      <div class="d-flex gap-2 align-items-start">
+        {% if subscription.status == 'active' %}
+          <form method="post" action="{% url 'subscriptions:pause' subscription.pk %}">{% csrf_token %}<button class="btn btn-sm btn-outline-warning">Pause</button></form>
+        {% else %}
+          <form method="post" action="{% url 'subscriptions:resume' subscription.pk %}">{% csrf_token %}<button class="btn btn-sm btn-outline-success">Resume</button></form>
+        {% endif %}
+        <form method="post" action="{% url 'subscriptions:cancel' subscription.pk %}">{% csrf_token %}<button class="btn btn-sm btn-outline-danger">Cancel</button></form>
+      </div>
+    </div>
+    {% if subscription.status == 'active' %}
+      <h3 class="h6">Coming up</h3>
+      <ul class="list-group">
+        {% for date, skipped in dates %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>{{ date|date:'l j F' }}{% if skipped %} <span class="badge text-bg-secondary">Skipped</span>{% endif %}</span>
+            {% if not skipped %}<form method="post" action="{% url 'subscriptions:skip' subscription.pk %}">{% csrf_token %}
+              <input type="hidden" name="date" value="{{ date|date:'Y-m-d' }}"><button class="btn btn-sm btn-link">Skip this week</button></form>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div></div>
+{% empty %}
+  <p class="text-muted">No subscriptions yet. Verified farms offer veg boxes on their pages.</p>
+{% endfor %}
+{% endblock %}

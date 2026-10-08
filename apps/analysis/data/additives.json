@@ -1,0 +1,2591 @@
+[
+ {
+  "code": "E100",
+  "name": "Curcumin",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E101",
+  "name": "Riboflavin colour",
+  "aliases": [
+   "riboflavin-5-phosphate colour"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E102",
+  "name": "Tartrazine",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E104",
+  "name": "Quinoline yellow",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E110",
+  "name": "Sunset yellow FCF",
+  "aliases": [
+   "sunset yellow"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E120",
+  "name": "Carmine",
+  "aliases": [
+   "cochineal",
+   "carminic acid"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E122",
+  "name": "Azorubine",
+  "aliases": [
+   "carmoisine"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E123",
+  "name": "Amaranth",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E124",
+  "name": "Ponceau 4R",
+  "aliases": [
+   "cochineal red a"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E127",
+  "name": "Erythrosine",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E129",
+  "name": "Allura red AC",
+  "aliases": [
+   "allura red"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E131",
+  "name": "Patent blue V",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E132",
+  "name": "Indigo carmine",
+  "aliases": [
+   "indigotine"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E133",
+  "name": "Brilliant blue FCF",
+  "aliases": [
+   "brilliant blue"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E140",
+  "name": "Chlorophylls",
+  "aliases": [
+   "chlorophyll"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E141",
+  "name": "Copper complexes of chlorophylls",
+  "aliases": [
+   "copper chlorophyll"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E142",
+  "name": "Green S",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E150A",
+  "name": "Plain caramel",
+  "aliases": [
+   "caramel colour",
+   "caramel color"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E150B",
+  "name": "Caustic sulphite caramel",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E150C",
+  "name": "Ammonia caramel",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E150D",
+  "name": "Sulphite ammonia caramel",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E151",
+  "name": "Brilliant black BN",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E153",
+  "name": "Vegetable carbon",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E155",
+  "name": "Brown HT",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E160A",
+  "name": "Carotenes",
+  "aliases": [
+   "beta-carotene",
+   "beta carotene",
+   "mixed carotenes"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E160B",
+  "name": "Annatto",
+  "aliases": [
+   "bixin",
+   "norbixin"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E160C",
+  "name": "Paprika extract",
+  "aliases": [
+   "capsanthin",
+   "paprika oleoresin"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E160D",
+  "name": "Lycopene",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E160E",
+  "name": "Beta-apo-8'-carotenal",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E161B",
+  "name": "Lutein",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E161G",
+  "name": "Canthaxanthin",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E162",
+  "name": "Beetroot red",
+  "aliases": [
+   "betanin"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E163",
+  "name": "Anthocyanins",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E170",
+  "name": "Calcium carbonate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E171",
+  "name": "Titanium dioxide",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E172",
+  "name": "Iron oxides and hydroxides",
+  "aliases": [
+   "iron oxide"
+  ],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E173",
+  "name": "Aluminium",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E174",
+  "name": "Silver",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E175",
+  "name": "Gold",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E180",
+  "name": "Litholrubine BK",
+  "aliases": [],
+  "kind": "colour",
+  "marker": true
+ },
+ {
+  "code": "E200",
+  "name": "Sorbic acid",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E202",
+  "name": "Potassium sorbate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E203",
+  "name": "Calcium sorbate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E210",
+  "name": "Benzoic acid",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E211",
+  "name": "Sodium benzoate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E212",
+  "name": "Potassium benzoate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E213",
+  "name": "Calcium benzoate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E214",
+  "name": "Ethyl p-hydroxybenzoate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E215",
+  "name": "Sodium ethyl p-hydroxybenzoate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E218",
+  "name": "Methyl p-hydroxybenzoate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E219",
+  "name": "Sodium methyl p-hydroxybenzoate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E220",
+  "name": "Sulphur dioxide",
+  "aliases": [
+   "sulfur dioxide"
+  ],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E221",
+  "name": "Sodium sulphite",
+  "aliases": [
+   "sodium sulfite"
+  ],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E222",
+  "name": "Sodium hydrogen sulphite",
+  "aliases": [
+   "sodium bisulphite"
+  ],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E223",
+  "name": "Sodium metabisulphite",
+  "aliases": [
+   "sodium metabisulfite"
+  ],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E224",
+  "name": "Potassium metabisulphite",
+  "aliases": [
+   "potassium metabisulfite"
+  ],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E226",
+  "name": "Calcium sulphite",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E227",
+  "name": "Calcium hydrogen sulphite",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E228",
+  "name": "Potassium hydrogen sulphite",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E234",
+  "name": "Nisin",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E235",
+  "name": "Natamycin",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E239",
+  "name": "Hexamethylene tetramine",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E242",
+  "name": "Dimethyl dicarbonate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E249",
+  "name": "Potassium nitrite",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E250",
+  "name": "Sodium nitrite",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E251",
+  "name": "Sodium nitrate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E252",
+  "name": "Potassium nitrate",
+  "aliases": [
+   "saltpetre"
+  ],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E260",
+  "name": "Acetic acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E261",
+  "name": "Potassium acetate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E262",
+  "name": "Sodium acetates",
+  "aliases": [
+   "sodium acetate",
+   "sodium diacetate"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E263",
+  "name": "Calcium acetate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E270",
+  "name": "Lactic acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E280",
+  "name": "Propionic acid",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E281",
+  "name": "Sodium propionate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E282",
+  "name": "Calcium propionate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E283",
+  "name": "Potassium propionate",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E284",
+  "name": "Boric acid",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E285",
+  "name": "Sodium tetraborate",
+  "aliases": [
+   "borax"
+  ],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E290",
+  "name": "Carbon dioxide",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E296",
+  "name": "Malic acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E297",
+  "name": "Fumaric acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E300",
+  "name": "Ascorbic acid",
+  "aliases": [
+   "vitamin c"
+  ],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E301",
+  "name": "Sodium ascorbate",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E302",
+  "name": "Calcium ascorbate",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E304",
+  "name": "Ascorbyl palmitate",
+  "aliases": [
+   "fatty acid esters of ascorbic acid"
+  ],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E306",
+  "name": "Tocopherol-rich extract",
+  "aliases": [
+   "tocopherols",
+   "mixed tocopherols"
+  ],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E307",
+  "name": "Alpha-tocopherol",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E308",
+  "name": "Gamma-tocopherol",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E309",
+  "name": "Delta-tocopherol",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E310",
+  "name": "Propyl gallate",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E315",
+  "name": "Erythorbic acid",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E316",
+  "name": "Sodium erythorbate",
+  "aliases": [],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E319",
+  "name": "Tertiary-butyl hydroquinone",
+  "aliases": [
+   "tbhq"
+  ],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E320",
+  "name": "Butylated hydroxyanisole",
+  "aliases": [
+   "bha"
+  ],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E321",
+  "name": "Butylated hydroxytoluene",
+  "aliases": [
+   "bht"
+  ],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E322",
+  "name": "Lecithins",
+  "aliases": [
+   "lecithin",
+   "soya lecithin",
+   "soy lecithin",
+   "sunflower lecithin",
+   "rapeseed lecithin"
+  ],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E325",
+  "name": "Sodium lactate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E326",
+  "name": "Potassium lactate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E327",
+  "name": "Calcium lactate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E330",
+  "name": "Citric acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E331",
+  "name": "Sodium citrates",
+  "aliases": [
+   "sodium citrate",
+   "trisodium citrate"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E332",
+  "name": "Potassium citrates",
+  "aliases": [
+   "potassium citrate"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E333",
+  "name": "Calcium citrates",
+  "aliases": [
+   "calcium citrate"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E334",
+  "name": "Tartaric acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E335",
+  "name": "Sodium tartrates",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E336",
+  "name": "Potassium tartrates",
+  "aliases": [
+   "cream of tartar"
+  ],
+  "kind": "raising_agent",
+  "marker": false
+ },
+ {
+  "code": "E338",
+  "name": "Phosphoric acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E339",
+  "name": "Sodium phosphates",
+  "aliases": [
+   "sodium phosphate"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E340",
+  "name": "Potassium phosphates",
+  "aliases": [
+   "potassium phosphate"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E341",
+  "name": "Calcium phosphates",
+  "aliases": [
+   "calcium phosphate"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E350",
+  "name": "Sodium malates",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E352",
+  "name": "Calcium malates",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E354",
+  "name": "Calcium tartrate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E355",
+  "name": "Adipic acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E363",
+  "name": "Succinic acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E380",
+  "name": "Triammonium citrate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E385",
+  "name": "Calcium disodium EDTA",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E392",
+  "name": "Extracts of rosemary",
+  "aliases": [
+   "rosemary extract"
+  ],
+  "kind": "antioxidant",
+  "marker": false
+ },
+ {
+  "code": "E400",
+  "name": "Alginic acid",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E401",
+  "name": "Sodium alginate",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E402",
+  "name": "Potassium alginate",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E403",
+  "name": "Ammonium alginate",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E404",
+  "name": "Calcium alginate",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E405",
+  "name": "Propane-1,2-diol alginate",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E406",
+  "name": "Agar",
+  "aliases": [
+   "agar agar"
+  ],
+  "kind": "gelling_agent",
+  "marker": true
+ },
+ {
+  "code": "E407",
+  "name": "Carrageenan",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E407A",
+  "name": "Processed eucheuma seaweed",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E410",
+  "name": "Locust bean gum",
+  "aliases": [
+   "carob bean gum",
+   "carob gum"
+  ],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E412",
+  "name": "Guar gum",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E413",
+  "name": "Tragacanth",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E414",
+  "name": "Gum arabic",
+  "aliases": [
+   "acacia gum",
+   "gum acacia"
+  ],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E415",
+  "name": "Xanthan gum",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E416",
+  "name": "Karaya gum",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E417",
+  "name": "Tara gum",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E418",
+  "name": "Gellan gum",
+  "aliases": [],
+  "kind": "gelling_agent",
+  "marker": true
+ },
+ {
+  "code": "E420",
+  "name": "Sorbitol",
+  "aliases": [
+   "sorbitol syrup"
+  ],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E421",
+  "name": "Mannitol",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E422",
+  "name": "Glycerol",
+  "aliases": [
+   "glycerine",
+   "glycerin"
+  ],
+  "kind": "humectant",
+  "marker": true
+ },
+ {
+  "code": "E425",
+  "name": "Konjac",
+  "aliases": [
+   "konjac gum",
+   "glucomannan"
+  ],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E426",
+  "name": "Soybean hemicellulose",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E427",
+  "name": "Cassia gum",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E431",
+  "name": "Polyoxyethylene stearate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E432",
+  "name": "Polysorbate 20",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E433",
+  "name": "Polysorbate 80",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E434",
+  "name": "Polysorbate 40",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E435",
+  "name": "Polysorbate 60",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E436",
+  "name": "Polysorbate 65",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E440",
+  "name": "Pectins",
+  "aliases": [
+   "pectin"
+  ],
+  "kind": "gelling_agent",
+  "marker": true
+ },
+ {
+  "code": "E442",
+  "name": "Ammonium phosphatides",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E444",
+  "name": "Sucrose acetate isobutyrate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E445",
+  "name": "Glycerol esters of wood rosins",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E450",
+  "name": "Diphosphates",
+  "aliases": [
+   "disodium diphosphate",
+   "sodium acid pyrophosphate"
+  ],
+  "kind": "raising_agent",
+  "marker": false
+ },
+ {
+  "code": "E451",
+  "name": "Triphosphates",
+  "aliases": [
+   "sodium triphosphate",
+   "pentasodium triphosphate"
+  ],
+  "kind": "stabiliser",
+  "marker": true
+ },
+ {
+  "code": "E452",
+  "name": "Polyphosphates",
+  "aliases": [
+   "sodium polyphosphate"
+  ],
+  "kind": "stabiliser",
+  "marker": true
+ },
+ {
+  "code": "E459",
+  "name": "Beta-cyclodextrin",
+  "aliases": [],
+  "kind": "stabiliser",
+  "marker": true
+ },
+ {
+  "code": "E460",
+  "name": "Cellulose",
+  "aliases": [
+   "microcrystalline cellulose",
+   "powdered cellulose"
+  ],
+  "kind": "bulking_agent",
+  "marker": true
+ },
+ {
+  "code": "E461",
+  "name": "Methyl cellulose",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E463",
+  "name": "Hydroxypropyl cellulose",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E464",
+  "name": "Hydroxypropyl methyl cellulose",
+  "aliases": [
+   "hpmc"
+  ],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E465",
+  "name": "Ethyl methyl cellulose",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E466",
+  "name": "Carboxymethyl cellulose",
+  "aliases": [
+   "cellulose gum",
+   "sodium carboxymethyl cellulose"
+  ],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E468",
+  "name": "Crosslinked sodium carboxymethyl cellulose",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E469",
+  "name": "Enzymatically hydrolysed carboxymethylcellulose",
+  "aliases": [],
+  "kind": "thickener",
+  "marker": true
+ },
+ {
+  "code": "E470A",
+  "name": "Sodium, potassium and calcium salts of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E470B",
+  "name": "Magnesium salts of fatty acids",
+  "aliases": [
+   "magnesium stearate"
+  ],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E471",
+  "name": "Mono- and diglycerides of fatty acids",
+  "aliases": [
+   "mono and diglycerides of fatty acids",
+   "mono- and diglycerides",
+   "mono and diglycerides"
+  ],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E472A",
+  "name": "Acetic acid esters of mono- and diglycerides of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E472B",
+  "name": "Lactic acid esters of mono- and diglycerides of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E472C",
+  "name": "Citric acid esters of mono- and diglycerides of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E472D",
+  "name": "Tartaric acid esters of mono- and diglycerides of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E472E",
+  "name": "Mono- and diacetyl tartaric acid esters of mono- and diglycerides of fatty acids",
+  "aliases": [
+   "datem"
+  ],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E472F",
+  "name": "Mixed acetic and tartaric acid esters of mono- and diglycerides of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E473",
+  "name": "Sucrose esters of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E474",
+  "name": "Sucroglycerides",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E475",
+  "name": "Polyglycerol esters of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E476",
+  "name": "Polyglycerol polyricinoleate",
+  "aliases": [
+   "pgpr"
+  ],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E477",
+  "name": "Propane-1,2-diol esters of fatty acids",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E479B",
+  "name": "Thermally oxidised soya bean oil",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E481",
+  "name": "Sodium stearoyl-2-lactylate",
+  "aliases": [
+   "sodium stearoyl lactylate"
+  ],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E482",
+  "name": "Calcium stearoyl-2-lactylate",
+  "aliases": [
+   "calcium stearoyl lactylate"
+  ],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E483",
+  "name": "Stearyl tartrate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E491",
+  "name": "Sorbitan monostearate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E492",
+  "name": "Sorbitan tristearate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E493",
+  "name": "Sorbitan monolaurate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E494",
+  "name": "Sorbitan monooleate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E495",
+  "name": "Sorbitan monopalmitate",
+  "aliases": [],
+  "kind": "emulsifier",
+  "marker": true
+ },
+ {
+  "code": "E500",
+  "name": "Sodium carbonates",
+  "aliases": [
+   "sodium bicarbonate",
+   "bicarbonate of soda",
+   "baking soda",
+   "sodium hydrogen carbonate"
+  ],
+  "kind": "raising_agent",
+  "marker": false
+ },
+ {
+  "code": "E501",
+  "name": "Potassium carbonates",
+  "aliases": [
+   "potassium bicarbonate"
+  ],
+  "kind": "raising_agent",
+  "marker": false
+ },
+ {
+  "code": "E503",
+  "name": "Ammonium carbonates",
+  "aliases": [
+   "ammonium bicarbonate"
+  ],
+  "kind": "raising_agent",
+  "marker": false
+ },
+ {
+  "code": "E504",
+  "name": "Magnesium carbonates",
+  "aliases": [
+   "magnesium carbonate"
+  ],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E507",
+  "name": "Hydrochloric acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E508",
+  "name": "Potassium chloride",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E509",
+  "name": "Calcium chloride",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E511",
+  "name": "Magnesium chloride",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E512",
+  "name": "Stannous chloride",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E513",
+  "name": "Sulphuric acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E514",
+  "name": "Sodium sulphates",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E515",
+  "name": "Potassium sulphates",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E516",
+  "name": "Calcium sulphate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E517",
+  "name": "Ammonium sulphate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E520",
+  "name": "Aluminium sulphate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E521",
+  "name": "Aluminium sodium sulphate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E522",
+  "name": "Aluminium potassium sulphate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E523",
+  "name": "Aluminium ammonium sulphate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E524",
+  "name": "Sodium hydroxide",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E525",
+  "name": "Potassium hydroxide",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E526",
+  "name": "Calcium hydroxide",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E527",
+  "name": "Ammonium hydroxide",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E528",
+  "name": "Magnesium hydroxide",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E529",
+  "name": "Calcium oxide",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E530",
+  "name": "Magnesium oxide",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E535",
+  "name": "Sodium ferrocyanide",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E536",
+  "name": "Potassium ferrocyanide",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E538",
+  "name": "Calcium ferrocyanide",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E541",
+  "name": "Sodium aluminium phosphate",
+  "aliases": [],
+  "kind": "raising_agent",
+  "marker": false
+ },
+ {
+  "code": "E551",
+  "name": "Silicon dioxide",
+  "aliases": [
+   "silica"
+  ],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E552",
+  "name": "Calcium silicate",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E553A",
+  "name": "Magnesium silicate",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E553B",
+  "name": "Talc",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E554",
+  "name": "Sodium aluminium silicate",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E555",
+  "name": "Potassium aluminium silicate",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E556",
+  "name": "Calcium aluminium silicate",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E558",
+  "name": "Bentonite",
+  "aliases": [],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E559",
+  "name": "Aluminium silicate",
+  "aliases": [
+   "kaolin"
+  ],
+  "kind": "anti_caking",
+  "marker": false
+ },
+ {
+  "code": "E570",
+  "name": "Fatty acids",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E574",
+  "name": "Gluconic acid",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E575",
+  "name": "Glucono-delta-lactone",
+  "aliases": [
+   "glucono delta lactone"
+  ],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E576",
+  "name": "Sodium gluconate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E577",
+  "name": "Potassium gluconate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E578",
+  "name": "Calcium gluconate",
+  "aliases": [],
+  "kind": "acidity_regulator",
+  "marker": false
+ },
+ {
+  "code": "E579",
+  "name": "Ferrous gluconate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E585",
+  "name": "Ferrous lactate",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E620",
+  "name": "Glutamic acid",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E621",
+  "name": "Monosodium glutamate",
+  "aliases": [
+   "msg"
+  ],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E622",
+  "name": "Monopotassium glutamate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E623",
+  "name": "Calcium diglutamate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E624",
+  "name": "Monoammonium glutamate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E625",
+  "name": "Magnesium diglutamate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E626",
+  "name": "Guanylic acid",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E627",
+  "name": "Disodium guanylate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E628",
+  "name": "Dipotassium guanylate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E629",
+  "name": "Calcium guanylate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E630",
+  "name": "Inosinic acid",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E631",
+  "name": "Disodium inosinate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E632",
+  "name": "Dipotassium inosinate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E633",
+  "name": "Calcium inosinate",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E634",
+  "name": "Calcium 5'-ribonucleotides",
+  "aliases": [],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E635",
+  "name": "Disodium 5'-ribonucleotides",
+  "aliases": [
+   "disodium ribonucleotides"
+  ],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E640",
+  "name": "Glycine and its sodium salt",
+  "aliases": [
+   "glycine"
+  ],
+  "kind": "flavour_enhancer",
+  "marker": true
+ },
+ {
+  "code": "E900",
+  "name": "Dimethylpolysiloxane",
+  "aliases": [
+   "dimethicone"
+  ],
+  "kind": "anti_foaming",
+  "marker": true
+ },
+ {
+  "code": "E901",
+  "name": "Beeswax",
+  "aliases": [],
+  "kind": "glazing_agent",
+  "marker": true
+ },
+ {
+  "code": "E902",
+  "name": "Candelilla wax",
+  "aliases": [],
+  "kind": "glazing_agent",
+  "marker": true
+ },
+ {
+  "code": "E903",
+  "name": "Carnauba wax",
+  "aliases": [],
+  "kind": "glazing_agent",
+  "marker": true
+ },
+ {
+  "code": "E904",
+  "name": "Shellac",
+  "aliases": [],
+  "kind": "glazing_agent",
+  "marker": true
+ },
+ {
+  "code": "E905",
+  "name": "Microcrystalline wax",
+  "aliases": [],
+  "kind": "glazing_agent",
+  "marker": true
+ },
+ {
+  "code": "E907",
+  "name": "Hydrogenated poly-1-decene",
+  "aliases": [],
+  "kind": "glazing_agent",
+  "marker": true
+ },
+ {
+  "code": "E914",
+  "name": "Oxidised polyethylene wax",
+  "aliases": [],
+  "kind": "glazing_agent",
+  "marker": true
+ },
+ {
+  "code": "E920",
+  "name": "L-cysteine",
+  "aliases": [
+   "cysteine"
+  ],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E927B",
+  "name": "Carbamide",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E938",
+  "name": "Argon",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E939",
+  "name": "Helium",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E941",
+  "name": "Nitrogen",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E942",
+  "name": "Nitrous oxide",
+  "aliases": [],
+  "kind": "foaming_agent",
+  "marker": true
+ },
+ {
+  "code": "E948",
+  "name": "Oxygen",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E949",
+  "name": "Hydrogen",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E950",
+  "name": "Acesulfame K",
+  "aliases": [
+   "acesulfame potassium"
+  ],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E951",
+  "name": "Aspartame",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E952",
+  "name": "Cyclamates",
+  "aliases": [
+   "sodium cyclamate"
+  ],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E953",
+  "name": "Isomalt",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E954",
+  "name": "Saccharin",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E955",
+  "name": "Sucralose",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E957",
+  "name": "Thaumatin",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E959",
+  "name": "Neohesperidine DC",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E960",
+  "name": "Steviol glycosides",
+  "aliases": [
+   "stevia",
+   "stevia extract",
+   "steviol glycosides from stevia"
+  ],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E961",
+  "name": "Neotame",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E962",
+  "name": "Salt of aspartame-acesulfame",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E964",
+  "name": "Polyglycitol syrup",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E965",
+  "name": "Maltitol",
+  "aliases": [
+   "maltitol syrup"
+  ],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E966",
+  "name": "Lactitol",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E967",
+  "name": "Xylitol",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E968",
+  "name": "Erythritol",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E969",
+  "name": "Advantame",
+  "aliases": [],
+  "kind": "sweetener",
+  "marker": true
+ },
+ {
+  "code": "E999",
+  "name": "Quillaia extract",
+  "aliases": [
+   "quillaja extract"
+  ],
+  "kind": "foaming_agent",
+  "marker": true
+ },
+ {
+  "code": "E1103",
+  "name": "Invertase",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": "E1105",
+  "name": "Lysozyme",
+  "aliases": [],
+  "kind": "preservative",
+  "marker": false
+ },
+ {
+  "code": "E1200",
+  "name": "Polydextrose",
+  "aliases": [],
+  "kind": "bulking_agent",
+  "marker": true
+ },
+ {
+  "code": "E1404",
+  "name": "Oxidised starch",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1410",
+  "name": "Monostarch phosphate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1412",
+  "name": "Distarch phosphate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1413",
+  "name": "Phosphated distarch phosphate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1414",
+  "name": "Acetylated distarch phosphate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1420",
+  "name": "Acetylated starch",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1422",
+  "name": "Acetylated distarch adipate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1440",
+  "name": "Hydroxypropyl starch",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1442",
+  "name": "Hydroxypropyl distarch phosphate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1450",
+  "name": "Starch sodium octenyl succinate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1451",
+  "name": "Acetylated oxidised starch",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1452",
+  "name": "Starch aluminium octenyl succinate",
+  "aliases": [],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": "E1505",
+  "name": "Triethyl citrate",
+  "aliases": [],
+  "kind": "carrier",
+  "marker": true
+ },
+ {
+  "code": "E1517",
+  "name": "Glyceryl diacetate",
+  "aliases": [
+   "diacetin"
+  ],
+  "kind": "humectant",
+  "marker": true
+ },
+ {
+  "code": "E1518",
+  "name": "Glyceryl triacetate",
+  "aliases": [
+   "triacetin"
+  ],
+  "kind": "humectant",
+  "marker": true
+ },
+ {
+  "code": "E1519",
+  "name": "Benzyl alcohol",
+  "aliases": [],
+  "kind": "carrier",
+  "marker": true
+ },
+ {
+  "code": "E1520",
+  "name": "Propane-1,2-diol",
+  "aliases": [
+   "propylene glycol"
+  ],
+  "kind": "humectant",
+  "marker": true
+ },
+ {
+  "code": "E1521",
+  "name": "Polyethylene glycol",
+  "aliases": [],
+  "kind": "carrier",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Baking powder",
+  "aliases": [
+   "raising agents"
+  ],
+  "kind": "raising_agent",
+  "marker": false
+ },
+ {
+  "code": null,
+  "name": "Casein",
+  "aliases": [
+   "caseinate",
+   "caseinates",
+   "sodium caseinate",
+   "calcium caseinate"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Collagen",
+  "aliases": [
+   "hydrolysed collagen",
+   "collagen peptides"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Dextrose",
+  "aliases": [
+   "dextrose monohydrate"
+  ],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Flavouring",
+  "aliases": [
+   "flavourings",
+   "flavoring",
+   "flavorings",
+   "natural flavouring",
+   "natural flavourings",
+   "natural flavour",
+   "natural flavours",
+   "artificial flavouring",
+   "artificial flavourings",
+   "flavour",
+   "flavours",
+   "smoke flavouring",
+   "smoke flavourings",
+   "vanillin",
+   "ethyl vanillin",
+   "natural vanilla flavouring"
+  ],
+  "kind": "flavouring",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Flour treatment agent",
+  "aliases": [],
+  "kind": "other",
+  "marker": false
+ },
+ {
+  "code": null,
+  "name": "Fructose",
+  "aliases": [
+   "crystalline fructose"
+  ],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Glucose syrup",
+  "aliases": [
+   "dried glucose syrup",
+   "glucose syrup solids",
+   "glucose"
+  ],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Glucose-fructose syrup",
+  "aliases": [
+   "glucose fructose syrup",
+   "fructose-glucose syrup",
+   "fructose glucose syrup"
+  ],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "High-fructose corn syrup",
+  "aliases": [
+   "high fructose corn syrup",
+   "hfcs",
+   "corn syrup"
+  ],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Hydrogenated vegetable oil",
+  "aliases": [
+   "hydrogenated fat",
+   "hydrogenated oil",
+   "partially hydrogenated vegetable oil",
+   "hydrogenated palm oil",
+   "hydrogenated rapeseed oil",
+   "partially hydrogenated"
+  ],
+  "kind": "modified_fat",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Hydrolysed vegetable protein",
+  "aliases": [
+   "hydrolysed protein",
+   "hydrolysed soya protein",
+   "hydrolysed soy protein",
+   "hydrolysed wheat protein"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Interesterified fat",
+  "aliases": [
+   "interesterified vegetable oil",
+   "interesterified oil"
+  ],
+  "kind": "modified_fat",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Invert sugar syrup",
+  "aliases": [
+   "invert sugar",
+   "inverted sugar syrup"
+  ],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Isoglucose",
+  "aliases": [],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Lactose",
+  "aliases": [],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Maltodextrin",
+  "aliases": [],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Mechanically separated meat",
+  "aliases": [
+   "mechanically separated chicken",
+   "mechanically separated pork",
+   "mechanically recovered meat"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Milk protein",
+  "aliases": [
+   "milk protein concentrate",
+   "milk protein isolate",
+   "milk proteins"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Modified starch",
+  "aliases": [
+   "modified maize starch",
+   "modified corn starch",
+   "modified potato starch",
+   "modified tapioca starch",
+   "modified wheat starch",
+   "modified rice starch"
+  ],
+  "kind": "modified_starch",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Oligofructose",
+  "aliases": [
+   "fructo-oligosaccharides"
+  ],
+  "kind": "sugar_variant",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Pea protein isolate",
+  "aliases": [
+   "pea protein"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Soy protein isolate",
+  "aliases": [
+   "soya protein isolate",
+   "isolated soy protein",
+   "soya protein",
+   "soy protein"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Wheat gluten",
+  "aliases": [
+   "vital wheat gluten"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Whey protein",
+  "aliases": [
+   "whey protein concentrate",
+   "whey protein isolate",
+   "whey powder",
+   "whey"
+  ],
+  "kind": "protein_isolate",
+  "marker": true
+ },
+ {
+  "code": null,
+  "name": "Yeast extract",
+  "aliases": [
+   "yeast extracts",
+   "autolysed yeast extract"
+  ],
+  "kind": "flavour_enhancer",
+  "marker": true
+ }
+]

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}In season in {{ month_name }}{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">In season in {{ month_name }}</h1>
+    <p class="text-muted mb-0">Food that producers say is at its best this month.</p>
+  </div>
+  <form method="get" class="d-flex gap-2">
+    <select class="form-select" name="month" aria-label="Month">
+      {% for value, label in months %}<option value="{{ value }}"{% if value == month %} selected{% endif %}>{{ label }}</option>{% endfor %}
+    </select>
+    <button class="btn btn-outline-success">Show</button>
+  </form>
+</div>
+{% for category, products in groups %}
+  <h2 class="h5 mt-4">{{ category }}</h2>
+  {% include 'catalogue/includes/product_grid.html' %}
+{% empty %}
+  <p class="text-muted">Nothing marked as in season for {{ month_name }} yet.</p>
+{% endfor %}
+{% endblock %}

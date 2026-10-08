@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}Order {{ order.number }}{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <h1 class="h3 mb-0">Order {{ order.number }}</h1>
+  <span class="badge fs-6 text-bg-{% if order.status == 'collected' %}success{% elif order.is_open %}primary{% else %}secondary{% endif %}">{{ order.get_status_display }}</span>
+</div>
+<div class="row g-4">
+  <div class="col-lg-7">
+    <div class="card shadow-sm mb-3"><div class="card-body">
+      <p class="mb-1"><strong>{% if is_producer %}{{ order.buyer.get_full_name|default:order.buyer.get_username }}{% else %}{{ order.producer.name }}{% endif %}</strong></p>
+      <p class="text-muted mb-2">Collect {{ order.slot.start|date:'l j F' }}, {{ order.slot.start|time:'H:i' }}–{{ order.slot.end|time:'H:i' }} at {{ order.point.name }}, {{ order.point.address }}</p>
+      <table class="table table-sm mb-0">
+        <tbody>{% for item in items %}<tr><td>{{ item.quantity }} × {{ item.name }} <span class="text-muted small">{{ item.unit }}</span></td><td class="text-end">{{ item.line_total|euro }}</td></tr>{% endfor %}</tbody>
+        <tfoot><tr><th>Total{% if order.payment_method %} · paid by {{ order.get_payment_method_display|lower }}{% else %} · pay at collection{% endif %}</th><th class="text-end">{{ order.total|euro }}</th></tr></tfoot>
+      </table>
+      {% if order.reject_reason %}<p class="mt-3 mb-0"><strong>Reason:</strong> {{ order.reject_reason }}</p>{% endif %}
+    </div></div>
+    {% if actions %}
+      <div class="card shadow-sm mb-3"><div class="card-body">
+        <h2 class="h6">What next?</h2>
+        <div class="d-flex flex-wrap gap-2 align-items-start">
+          {% for name, label in actions %}
+            <form method="post" action="{% url 'orders:act' order.number %}" class="d-flex flex-wrap gap-2 align-items-start">{% csrf_token %}
+              <input type="hidden" name="action" value="{{ name }}">
+              {% if name == 'reject' %}
+                <input class="form-control form-control-sm" name="reason" placeholder="Reason for the buyer" required aria-label="Reason for rejecting">
+                <button class="btn btn-outline-danger btn-sm">{{ label }}</button>
+              {% elif name == 'collect' %}
+                <select class="form-select form-select-sm" name="payment_method" aria-label="How did they pay?" style="width:auto">
+                  {% for value, text in payment_choices %}<option value="{{ value }}">{{ text }}</option>{% endfor %}
+                </select>
+                <button class="btn btn-success btn-sm">{{ label }}</button>
+              {% elif name == 'cancel' or name == 'no_show' %}
+                <button class="btn btn-outline-danger btn-sm">{{ label }}</button>
+              {% else %}
+                <button class="btn btn-success btn-sm">{{ label }}</button>
+              {% endif %}
+            </form>
+          {% endfor %}
+        </div>
+      </div></div>
+    {% endif %}
+    <a class="btn btn-outline-secondary btn-sm" href="{% url 'messaging:thread' order.number %}">Message {% if is_producer %}the buyer{% else %}{{ order.producer.name }}{% endif %}</a>
+  </div>
+  <div class="col-lg-5">
+    <h2 class="h6">History</h2>
+    <ol class="list-unstyled small">
+      {% for event in events %}<li class="mb-1"><span class="text-muted">{{ event.created_at|date:'d/m/Y H:i' }}</span> · {{ event.to_status|capfirst }}{% if event.actor %} by {{ event.actor.get_username }}{% else %} (automatic){% endif %}{% if event.note %}: {{ event.note }}{% endif %}</li>{% endfor %}
+    </ol>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}{% if product %}Edit {{ product.name }}{% else %}New product{% endif %}{% endblock %}
+{% block content %}
+{% with sell_tab='products' %}{% include 'producers/_sell_nav.html' %}{% endwith %}
+<div class="row"><div class="col-lg-8">
+  <h1 class="h3">{% if product %}Edit {{ product.name }}{% else %}New product{% endif %}</h1>
+  <div class="card shadow-sm mb-3"><div class="card-body">
+    <h2 class="h6">Selling a packaged product?</h2>
+    <p class="small text-muted">Enter its barcode to fill in the name, ingredients and allergens from Open Food Facts.
+      Harvest still checks the ingredients itself.</p>
+    <div class="d-flex gap-2">
+      <input class="form-control" id="barcode-lookup" inputmode="numeric" placeholder="Barcode, e.g. 5000159484695" aria-label="Barcode to look up">
+      <button type="button" class="btn btn-outline-success" id="barcode-button" data-url="{% url 'catalogue:barcode' %}">Look up</button>
+    </div>
+    <div class="small mt-2" id="barcode-result" role="status"></div>
+  </div></div>
+  <div class="card shadow-sm"><div class="card-body p-4">
+    <form method="post" novalidate id="product-form">
+      {% csrf_token %}
+      {% include 'core/includes/form.html' %}
+      <button class="btn btn-success">{% if product %}Save{% else %}Create draft{% endif %}</button>
+      <a class="btn btn-link" href="{% url 'catalogue:mine' %}">Cancel</a>
+    </form>
+  </div></div>
+</div></div>
+{% endblock %}
+{% block extra_js %}
+<script>
+document.getElementById('barcode-button').addEventListener('click', async (event) => {
+  const code = document.getElementById('barcode-lookup').value.trim();
+  const result = document.getElementById('barcode-result');
+  if (!code) { result.textContent = 'Enter a barcode first.'; return; }
+  result.textContent = 'Looking up…';
+  try {
+    const reply = await fetch(`${event.target.dataset.url}?code=${encodeURIComponent(code)}`);
+    const data = await reply.json();
+    if (!reply.ok) { result.textContent = data.error; return; }
+    if (!data.found) { result.textContent = 'Not found in Open Food Facts. Please type the details in.'; return; }
+    const form = document.getElementById('product-form');
+    if (data.name) form.elements.name.value = data.name;
+    if (data.ingredients) form.elements.ingredients.value = data.ingredients;
+    form.elements.barcode.value = code;
+    form.elements.off_nova_group.value = data.nova_group || '';
+    form.querySelectorAll('input[name="allergens"]').forEach((box) => { box.checked = data.allergens.includes(box.value); });
+    result.textContent = 'Filled in from Open Food Facts' + (data.nova_group ? ` (they rate it NOVA ${data.nova_group})` : '') + '. Check everything before saving.';
+  } catch (error) {
+    result.textContent = 'Open Food Facts could not be reached. Please type the details in.';
+  }
+});
+</script>
+{% endblock %}

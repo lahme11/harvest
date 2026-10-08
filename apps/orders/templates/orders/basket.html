@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}Your basket{% endblock %}
+{% block content %}
+<h1 class="h3">Your basket</h1>
+<p class="text-muted">Each producer's items are ordered and collected separately. You pay each producer when you collect.</p>
+{% if limited %}<div class="alert alert-warning">You missed two collections recently, so you can have one open order at a time for now.</div>{% endif %}
+{% for group in groups %}
+  <div class="card shadow-sm mb-3">
+    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+      <strong>{{ group.producer.name }}</strong>
+      <span class="text-muted small">{{ group.producer.get_county_display }}</span>
+    </div>
+    <ul class="list-group list-group-flush">
+      {% for line in group.lines %}
+        <li class="list-group-item d-flex flex-wrap justify-content-between align-items-center gap-2">
+          <div>
+            <a href="{{ line.product.get_absolute_url }}">{{ line.product.name }}</a>
+            <span class="text-muted small">{{ line.product.price|euro }} {{ line.product.get_unit_display }}</span>
+            {% if line.problem %}<span class="badge text-bg-warning ms-1">{{ line.problem }}</span>{% endif %}
+          </div>
+          <div class="d-flex gap-2 align-items-center">
+            <form method="post" action="{% url 'orders:update' line.product.pk %}" class="d-flex gap-1">{% csrf_token %}
+              <input class="form-control form-control-sm" style="width:4.5rem" type="number" min="0" name="quantity" value="{{ line.quantity }}" aria-label="Quantity of {{ line.product.name }}">
+              <button class="btn btn-sm btn-outline-secondary">Update</button>
+            </form>
+            <span class="fw-semibold" style="min-width:5rem;text-align:right">{{ line.line_total|euro }}</span>
+            <form method="post" action="{% url 'orders:remove' line.product.pk %}">{% csrf_token %}
+              <button class="btn btn-sm btn-link text-danger" aria-label="Remove {{ line.product.name }}">Remove</button></form>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="card-footer bg-white d-flex justify-content-between align-items-center">
+      <span>Subtotal <strong>{{ group.subtotal|euro }}</strong></span>
+      {% if group.can_checkout %}<a class="btn btn-success" href="{% url 'orders:checkout' group.producer.pk %}">Choose a collection slot</a>{% endif %}
+    </div>
+  </div>
+{% empty %}
+  <div class="alert alert-light border">Your basket is empty. <a href="{% url 'catalogue:browse' %}">Browse food</a></div>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,25 @@
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'orders:basket' %}">Basket{% if basket_count %} <span class="badge rounded-pill text-bg-light" title="Items in your basket">{{ basket_count }}</span>{% endif %}</a>
+</li>
+<li class="nav-item"><a class="nav-link" href="{% url 'orders:mine' %}">Orders</a></li>
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'messaging:inbox' %}">Messages{% if unread_message_count %} <span class="badge rounded-pill text-bg-danger" title="Unread messages">{{ unread_message_count }}</span>{% endif %}</a>
+</li>
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ user.get_username }}</a>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><a class="dropdown-item" href="{% url 'accounts:profile' %}">Account</a></li>
+    <li><a class="dropdown-item" href="{% url 'saved:favourites' %}">Saved food</a></li>
+    <li><a class="dropdown-item" href="{% url 'saved:searches' %}">Saved searches</a></li>
+    <li><a class="dropdown-item" href="{% url 'subscriptions:mine' %}">Subscriptions</a></li>
+    <li><a class="dropdown-item" href="{% url 'catalogue:mine' %}">Selling</a></li>
+    {% if user.is_staff %}<li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin</a></li>{% endif %}
+    <li><hr class="dropdown-divider"></li>
+    <li>
+      <form method="post" action="{% url 'accounts:logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="dropdown-item">Log out</button>
+      </form>
+    </li>
+  </ul>
+</li>

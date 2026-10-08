@@ -1,0 +1,4 @@
+<form class="d-flex me-lg-3 my-2 my-lg-0" role="search" method="get" action="{% url 'catalogue:browse' %}">
+  <input class="form-control form-control-sm" type="search" name="q" value="{{ request.GET.q }}"
+         placeholder="Search, e.g. organic eggs cork" aria-label="Search food">
+</form>

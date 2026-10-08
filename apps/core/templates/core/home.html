@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load catalogue_tags %}
+{% block title %}Whole food from Irish producers{% endblock %}
+{% block content %}
+<section class="hero rounded-4 p-4 p-md-5 mb-4">
+  <h1 class="display-6 fw-semibold">Real food, straight from the people who grow it</h1>
+  <p class="lead">Harvest connects you with Irish farms and home producers. Every product shows how processed it is,
+    worked out from its ingredients, so you can fill your basket with whole food.</p>
+  <form method="get" action="{% url 'catalogue:browse' %}" class="d-flex gap-2" role="search">
+    <input class="form-control form-control-lg" type="search" name="q" placeholder="Search food, farms or counties" aria-label="Search food">
+    <button class="btn btn-success btn-lg">Search</button>
+  </form>
+  <div class="mt-3 d-flex flex-wrap gap-2">
+    <a class="btn btn-sm btn-light border" href="{% url 'catalogue:browse' %}?max_nova=1">Unprocessed only</a>
+    <a class="btn btn-sm btn-light border" href="{% url 'catalogue:season' %}">In season now</a>
+    <a class="btn btn-sm btn-light border" href="{% url 'catalogue:browse' %}?organic=on">Certified organic</a>
+    <a class="btn btn-sm btn-light border" href="{% url 'producers:directory' %}">Verified farms</a>
+  </div>
+</section>
+<div class="row g-3 mb-4 text-center small">
+  <div class="col-md-4"><div class="p-3 bg-white rounded shadow-sm"><strong>Know what's in it</strong><br>Ingredients checked for additives and markers of ultra-processing.</div></div>
+  <div class="col-md-4"><div class="p-3 bg-white rounded shadow-sm"><strong>Collect locally</strong><br>Pick a collection slot at the farm gate or market stall.</div></div>
+  <div class="col-md-4"><div class="p-3 bg-white rounded shadow-sm"><strong>Pay when you collect</strong><br>No card details online. Pay the producer in person.</div></div>
+</div>
+<h2 class="h4 mb-3">New on Harvest</h2>
+{% newest_products 8 %}
+{% endblock %}

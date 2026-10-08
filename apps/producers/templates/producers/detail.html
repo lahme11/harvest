@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load catalogue_tags harvest %}
+{% block title %}{{ producer.name }}{% endblock %}
+{% block content %}
+<div class="mb-4">
+  <h1 class="h2 mb-1">{{ producer.name }}</h1>
+  <p class="mb-2"><span class="badge verified-badge">Verified farm</span>
+    <span class="text-muted">{{ producer.get_county_display }}</span>
+    {% if producer.organic_cert_no %}<span class="badge text-bg-success">Certified organic · {{ producer.organic_cert_no }}</span>{% endif %}</p>
+  {% if average %}<p class="mb-2"><span class="text-warning">{{ average|stars }}</span> {{ average }} from {{ review_count }} review{{ review_count|pluralize }}</p>{% endif %}
+  <p class="lead">{{ producer.description|linebreaksbr }}</p>
+</div>
+{% block producer_sections %}
+<h2 class="h4 mb-3">From {{ producer.name }}</h2>
+{% producer_products producer %}
+<h2 class="h4 mt-5 mb-3">Reviews</h2>
+{% if can_review %}
+  <form method="post" action="{% url 'producers:review' producer.slug %}" class="card shadow-sm card-body mb-3">{% csrf_token %}
+    <h3 class="h6">{% if own_review %}Update your review{% else %}Review {{ producer.name }}{% endif %}</h3>
+    <div class="d-flex gap-2 mb-2">
+      <select class="form-select" style="width:auto" name="rating" aria-label="Rating">
+        {% for n in '54321' %}<option value="{{ n }}"{% if own_review and own_review.rating|stringformat:'d' == n %} selected{% endif %}>{{ n }} star{{ n|pluralize }}</option>{% endfor %}
+      </select>
+    </div>
+    <textarea class="form-control mb-2" name="text" rows="3" required aria-label="Your review">{{ own_review.text|default:'' }}</textarea>
+    <div><button class="btn btn-success btn-sm">Save review</button></div>
+  </form>
+{% endif %}
+{% for review in reviews %}
+  <div class="border-bottom py-3">
+    <div><span class="text-warning">{{ review.rating|stars }}</span> <strong>{{ review.author.get_username }}</strong>
+      <span class="small text-muted">{{ review.updated_at|date:'d/m/Y' }}</span></div>
+    <p class="mb-1">{{ review.text|linebreaksbr }}</p>
+    {% if review.reply %}<div class="ms-3 ps-3 border-start small"><strong>{{ producer.name }} replied:</strong> {{ review.reply|linebreaksbr }}</div>
+    {% elif is_owner %}
+      <form method="post" action="{% url 'producers:review_reply' review.pk %}" class="d-flex gap-2 mt-2">{% csrf_token %}
+        <input class="form-control form-control-sm" name="reply" placeholder="Reply once, publicly" aria-label="Reply to {{ review.author.get_username }}">
+        <button class="btn btn-sm btn-outline-success">Reply</button></form>
+    {% endif %}
+  </div>
+{% empty %}
+  <p class="text-muted">No reviews yet.</p>
+{% endfor %}
+{% endblock %}
+{% endblock %}

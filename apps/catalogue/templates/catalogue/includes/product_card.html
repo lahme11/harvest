@@ -1,0 +1,16 @@
+{% load harvest %}
+<div class="card h-100 shadow-sm product-card">
+  {% with photo=product.cover_photo %}
+    {% if photo %}<img src="{{ photo.thumbnail.url }}" class="card-img-top" alt="{{ product.name }}" loading="lazy">
+    {% else %}<div class="card-img-top bg-body-secondary d-flex align-items-center justify-content-center text-muted" style="aspect-ratio:4/3">{{ product.get_category_display }}</div>{% endif %}
+  {% endwith %}
+  <div class="card-body d-flex flex-column">
+    <div class="d-flex gap-1 flex-wrap mb-2">{{ product.nova_group|nova_badge }} {{ product.grade|grade_badge }}
+      {% if product.organic %}<span class="badge text-bg-success">Organic</span>{% endif %}</div>
+    <h3 class="h6 card-title mb-1"><a class="stretched-link" href="{{ product.get_absolute_url }}">{{ product.name }}</a></h3>
+    <p class="small text-muted mb-2">{{ product.producer.name }} · {{ product.producer.get_county_display }}
+      {% if product.producer.verified %}<span class="badge verified-badge">Verified</span>{% endif %}</p>
+    <p class="mt-auto mb-0 fw-semibold">{{ product.price|euro }} <span class="fw-normal text-muted small">{{ product.get_unit_display }}</span>
+      {% if product.is_sold_out %}<span class="badge text-bg-secondary ms-1">Sold out</span>{% endif %}</p>
+  </div>
+</div>

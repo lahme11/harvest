@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}Collect from {{ producer.name }}{% endblock %}
+{% block content %}
+<h1 class="h3">Collect from {{ producer.name }}</h1>
+<div class="row g-4">
+  <div class="col-lg-7">
+    <h2 class="h5">Choose a collection slot</h2>
+    {% if slots %}
+      <form method="post">
+        {% csrf_token %}
+        <div class="list-group mb-3">
+          {% for slot in slots %}
+            <label class="list-group-item d-flex gap-2 align-items-center">
+              <input class="form-check-input" type="radio" name="slot" value="{{ slot.pk }}"{% if forloop.first %} checked{% endif %}>
+              <span><strong>{{ slot.start|date:'l j F' }}, {{ slot.start|time:'H:i' }}–{{ slot.end|time:'H:i' }}</strong><br>
+                <span class="small text-muted">{{ slot.point.name }}, {{ slot.point.address }}</span></span>
+            </label>
+          {% endfor %}
+        </div>
+        <button class="btn btn-success">Reserve for 15 minutes</button>
+        <p class="small text-muted mt-2">Reserving holds your items and slot while you confirm.</p>
+      </form>
+    {% else %}
+      <div class="alert alert-light border">{{ producer.name }} has no collection slots open right now. Check back soon.</div>
+    {% endif %}
+  </div>
+  <div class="col-lg-5">
+    <div class="card shadow-sm"><div class="card-body">
+      <h2 class="h6">Your items</h2>
+      <ul class="list-unstyled small mb-2">{% for line in group.lines %}{% if not line.problem %}<li class="d-flex justify-content-between"><span>{{ line.quantity }} × {{ line.product.name }}</span><span>{{ line.line_total|euro }}</span></li>{% endif %}{% endfor %}</ul>
+      <p class="d-flex justify-content-between mb-0"><strong>Total</strong><strong>{{ group.subtotal|euro }}</strong></p>
+      <p class="small text-muted mb-0">Pay {{ producer.name }} when you collect.</p>
+    </div></div>
+  </div>
+</div>
+{% endblock %}

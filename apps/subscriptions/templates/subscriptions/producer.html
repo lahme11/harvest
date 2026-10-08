@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Subscribers{% endblock %}
+{% block content %}
+{% with sell_tab='subscribers' %}{% include 'producers/_sell_nav.html' %}{% endwith %}
+<h1 class="h3">Subscribers</h1>
+<div class="table-responsive">
+<table class="table bg-white shadow-sm">
+  <thead><tr><th>Subscriber</th><th>Box</th><th>Collection</th><th>Status</th><th>Since</th></tr></thead>
+  <tbody>
+  {% for subscription in subscriptions %}
+    <tr><td>{{ subscription.buyer.get_username }}</td><td>{{ subscription.box.name }}</td>
+      <td>{{ subscription.rule }} · {{ subscription.rule.point.name }}</td><td>{{ subscription.get_status_display }}</td>
+      <td>{{ subscription.start_date|date:'d/m/Y' }}</td></tr>
+  {% empty %}
+    <tr><td colspan="5" class="text-muted">No subscribers yet.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

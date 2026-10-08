@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Django
+*.sqlite3
+*.log
+staticfiles/
+media/
+
+# Superpowers scratch
+.superpowers/
+
+# Windows download metadata
+*:Zone.Identifier
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

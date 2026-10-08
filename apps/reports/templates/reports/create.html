@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Report {{ product.name }}{% endblock %}
+{% block content %}
+<div class="row justify-content-center"><div class="col-lg-6">
+  <h1 class="h4">Report {{ product.name }}</h1>
+  <p class="text-muted">Tell us what's wrong. Reports are private; the producer is not told who reported.</p>
+  <form method="post" class="card shadow-sm card-body" novalidate>{% csrf_token %}
+    {% include 'core/includes/form.html' %}
+    <button class="btn btn-danger">Send report</button>
+  </form>
+</div></div>
+{% endblock %}

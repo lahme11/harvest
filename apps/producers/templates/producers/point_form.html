@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}{% if point %}Edit collection point{% else %}New collection point{% endif %}{% endblock %}
+{% block content %}
+<div class="row justify-content-center"><div class="col-lg-6">
+  <h1 class="h3">{% if point %}Edit {{ point.name }}{% else %}New collection point{% endif %}</h1>
+  <div class="card shadow-sm"><div class="card-body p-4">
+    <form method="post" novalidate>
+      {% csrf_token %}
+      {% include 'core/includes/form.html' %}
+      <button class="btn btn-success">Save</button>
+      <a class="btn btn-link" href="{% url 'producers:points' %}">Cancel</a>
+    </form>
+  </div></div>
+</div></div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% load harvest %}
+<div class="card shadow-sm analysis-panel">
+  <div class="card-body">
+    <h2 class="h5">How processed is it?</h2>
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <div class="display-6 fw-semibold">{{ product.grade|grade_badge }}</div>
+      <div>
+        <div>{{ product.nova_group|nova_badge }}</div>
+        <div class="small text-muted">Clean score {{ product.clean_score }}/100</div>
+      </div>
+    </div>
+    <ul class="small mb-2">
+      {% for reason in product.reasons %}<li>{{ reason }}</li>{% endfor %}
+    </ul>
+    {% if product.off_nova_group %}
+      <p class="small mb-2 text-muted">Open Food Facts: NOVA {{ product.off_nova_group }} · Harvest: NOVA {{ product.nova_group }}</p>
+    {% endif %}
+    <p class="small text-muted mb-0">Worked out by Harvest from the ingredient list using the NOVA classification.
+      NOVA 1 is unprocessed food; NOVA 4 contains markers of industrial ultra-processing.</p>
+  </div>
+</div>

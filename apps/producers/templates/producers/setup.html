@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block title %}Start selling{% endblock %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-7">
+    <h1 class="h3">Start selling on Harvest</h1>
+    <p class="text-muted">Anyone can sell as a home producer, with up to 8 live products. Farms can then apply to be
+      verified for unlimited products, a badge, reviews and veg-box subscriptions.</p>
+    <div class="card shadow-sm"><div class="card-body p-4">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'core/includes/form.html' %}
+        <button class="btn btn-success">Create my producer profile</button>
+      </form>
+    </div></div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,7 @@
+<div class="row g-3">
+  {% for product in products %}
+    <div class="col-6 col-md-4 col-lg-3">{% include 'catalogue/includes/product_card.html' %}</div>
+  {% empty %}
+    <p class="text-muted">Nothing listed right now.</p>
+  {% endfor %}
+</div>

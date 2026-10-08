@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+{% with sell_tab='dashboard' %}{% include 'producers/_sell_nav.html' %}{% endwith %}
+<h1 class="h3 mb-3">{{ producer.name }}</h1>
+<div class="row g-3 mb-4">
+  <div class="col-6 col-lg-3"><div class="card shadow-sm h-100"><div class="card-body">
+    <div class="small text-muted">Waiting for you</div><div class="display-6">{{ open_orders.pending }}</div>
+    <a class="small" href="{% url 'orders:producer_orders' %}?status=pending">Accept or reject</a></div></div></div>
+  <div class="col-6 col-lg-3"><div class="card shadow-sm h-100"><div class="card-body">
+    <div class="small text-muted">Accepted</div><div class="display-6">{{ open_orders.accepted }}</div></div></div></div>
+  <div class="col-6 col-lg-3"><div class="card shadow-sm h-100"><div class="card-body">
+    <div class="small text-muted">Ready to collect</div><div class="display-6">{{ open_orders.ready }}</div></div></div></div>
+  <div class="col-6 col-lg-3"><div class="card shadow-sm h-100"><div class="card-body">
+    <div class="small text-muted">Sales, last 30 days</div><div class="display-6">{{ sales_30_days|euro }}</div></div></div></div>
+</div>
+<div class="row g-4">
+  <div class="col-lg-6">
+    <h2 class="h5">Next 7 days</h2>
+    <ul class="list-group shadow-sm">
+      {% for slot, count in slots_next_7_days %}
+        <li class="list-group-item d-flex justify-content-between"><span>{{ slot.start|date:'D d/m' }} {{ slot.start|time:'H:i' }} · {{ slot.point.name }}</span>
+          <span class="badge text-bg-{% if count >= slot.capacity %}danger{% elif count %}primary{% else %}light border{% endif %}">{{ count }} / {{ slot.capacity }}</span></li>
+      {% empty %}
+        <li class="list-group-item text-muted">No collection slots in the next week. <a href="{% url 'producers:points' %}">Add collection times</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="col-lg-6">
+    <h2 class="h5">Low stock</h2>
+    <ul class="list-group shadow-sm mb-4">
+      {% for product in low_stock %}<li class="list-group-item d-flex justify-content-between"><a href="{% url 'catalogue:mine' %}">{{ product.name }}</a><span>{{ product.stock }} left</span></li>
+      {% empty %}<li class="list-group-item text-muted">Nothing running low.</li>{% endfor %}
+    </ul>
+    <h2 class="h5">Best sellers, last 30 days</h2>
+    <ol class="list-group list-group-numbered shadow-sm">
+      {% for name, quantity in top_products %}<li class="list-group-item d-flex justify-content-between"><span>{{ name }}</span><span>{{ quantity }}</span></li>
+      {% empty %}<li class="list-group-item text-muted">No collected orders yet.</li>{% endfor %}
+    </ol>
+  </div>
+</div>
+{% endblock %}

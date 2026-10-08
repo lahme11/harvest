@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Saved searches{% endblock %}
+{% block content %}
+<h1 class="h3">Saved searches</h1>
+<p class="text-muted">We email you (at most once a day per search) when a newly listed product matches.</p>
+<ul class="list-group shadow-sm">
+  {% for search in searches %}
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <a href="{% url 'catalogue:browse' %}?{{ search.query_string }}">{{ search.name }}</a>
+      <form method="post" action="{% url 'saved:delete_search' search.pk %}">{% csrf_token %}<button class="btn btn-sm btn-link text-danger">Delete</button></form>
+    </li>
+  {% empty %}
+    <li class="list-group-item text-muted">No saved searches. Search, then choose "Save this search".</li>
+  {% endfor %}
+</ul>
+{% endblock %}

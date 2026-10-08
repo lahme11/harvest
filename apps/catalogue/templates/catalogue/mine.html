@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}My products{% endblock %}
+{% block content %}
+{% with sell_tab='products' %}{% include 'producers/_sell_nav.html' %}{% endwith %}
+<div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-0">My products</h1>
+    <p class="text-muted mb-0 small">{{ live_count }} live{% if limit %} of {{ limit }} allowed for home producers{% endif %}</p>
+  </div>
+  <a class="btn btn-success" href="{% url 'catalogue:create' %}">Add a product</a>
+</div>
+<div class="table-responsive">
+<table class="table align-middle bg-white shadow-sm rounded">
+  <thead><tr><th>Product</th><th>Status</th><th>Processing</th><th>Price</th><th>Stock</th><th>Views</th><th></th></tr></thead>
+  <tbody>
+  {% for product in products %}
+    <tr>
+      <td><a href="{{ product.get_absolute_url }}">{{ product.name }}</a><div class="small text-muted">{{ product.get_category_display }}{% if product.is_box %} · subscription{% endif %}</div></td>
+      <td><span class="badge text-bg-{% if product.is_live %}success{% elif product.status == 'paused' %}warning{% else %}secondary{% endif %}">{{ product.get_status_display }}</span></td>
+      <td>{{ product.nova_group|nova_badge }} {{ product.grade|grade_badge }}</td>
+      <td>
+        <form method="post" action="{% url 'catalogue:price' product.pk %}" class="d-flex gap-1">{% csrf_token %}
+          <input class="form-control form-control-sm" style="width:6rem" name="price" value="{{ product.price }}" aria-label="Price for {{ product.name }}">
+          <button class="btn btn-sm btn-outline-secondary">Set</button></form>
+      </td>
+      <td>{% if product.is_box %}—{% else %}
+        <form method="post" action="{% url 'catalogue:stock' product.pk %}" class="d-flex gap-1">{% csrf_token %}
+          <input class="form-control form-control-sm" style="width:5rem" name="stock" value="{{ product.stock }}" aria-label="Stock for {{ product.name }}">
+          <button class="btn btn-sm btn-outline-secondary">Set</button></form>{% endif %}
+      </td>
+      <td>{{ product.view_count }}</td>
+      <td class="text-nowrap">
+        <a class="btn btn-sm btn-outline-secondary" href="{% url 'catalogue:edit' product.pk %}">Edit</a>
+        <a class="btn btn-sm btn-outline-secondary" href="{% url 'catalogue:photos' product.pk %}">Photos</a>
+        {% if product.is_live %}
+          <form class="d-inline" method="post" action="{% url 'catalogue:pause' product.pk %}">{% csrf_token %}<button class="btn btn-sm btn-outline-warning">Pause</button></form>
+        {% else %}
+          <form class="d-inline" method="post" action="{% url 'catalogue:publish' product.pk %}">{% csrf_token %}<button class="btn btn-sm btn-success">Publish</button></form>
+        {% endif %}
+        <form class="d-inline" method="post" action="{% url 'catalogue:archive' product.pk %}">{% csrf_token %}<button class="btn btn-sm btn-link text-danger">Archive</button></form>
+      </td>
+    </tr>
+  {% empty %}
+    <tr><td colspan="7" class="text-muted">No products yet. Add your first one.</td></tr>
+  {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endblock %}

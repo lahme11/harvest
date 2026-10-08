@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Messages about {{ order.number }}{% endblock %}
+{% block content %}
+<div class="row justify-content-center"><div class="col-lg-8">
+  <p><a href="{{ order.get_absolute_url }}">← Order {{ order.number }}</a></p>
+  <h1 class="h4">Messages with {{ other }}</h1>
+  <div class="d-flex flex-column gap-2 mb-3">
+    {% for message in thread %}
+      <div class="p-2 rounded {% if message.sender == user %}bg-success-subtle align-self-end{% else %}bg-white border align-self-start{% endif %}" style="max-width:80%">
+        <div class="small text-muted">{{ message.sender.get_username }} · {{ message.created_at|date:'d/m/Y H:i' }}</div>
+        {{ message.body|linebreaksbr }}
+      </div>
+    {% empty %}
+      <p class="text-muted">No messages yet.</p>
+    {% endfor %}
+  </div>
+  <form method="post">{% csrf_token %}
+    <label class="form-label" for="body">Your message</label>
+    <textarea class="form-control mb-2" id="body" name="body" rows="3" maxlength="2000" required></textarea>
+    <button class="btn btn-success">Send</button>
+  </form>
+</div></div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Messages{% endblock %}
+{% block content %}
+<h1 class="h3">Messages</h1>
+<div class="list-group shadow-sm">
+  {% for order, unread in conversations %}
+    <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="{% url 'messaging:thread' order.number %}">
+      <span><strong>{{ order.number }}</strong> · {% if order.buyer == user %}{{ order.producer.name }}{% else %}{{ order.buyer.get_username }}{% endif %}
+        <span class="small text-muted d-block">{{ order.last_message_at|date:'d/m/Y H:i' }}</span></span>
+      {% if unread %}<span class="badge rounded-pill text-bg-danger">{{ unread }} new</span>{% endif %}
+    </a>
+  {% empty %}
+    <p class="text-muted">No messages yet. You can message a producer from any order.</p>
+  {% endfor %}
+</div>
+{% endblock %}

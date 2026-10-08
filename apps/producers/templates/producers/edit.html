@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Producer profile{% endblock %}
+{% block content %}
+{% with sell_tab='profile' %}{% include 'producers/_sell_nav.html' %}{% endwith %}
+<div class="row">
+  <div class="col-lg-7">
+    <h1 class="h3 d-flex align-items-center gap-2">{{ producer.name }}
+      {% if producer.verified %}<span class="badge verified-badge">Verified farm</span>{% else %}<span class="badge text-bg-secondary">Home producer</span>{% endif %}
+    </h1>
+    <div class="card shadow-sm"><div class="card-body p-4">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'core/includes/form.html' %}
+        <button class="btn btn-success">Save</button>
+      </form>
+    </div></div>
+  </div>
+  <div class="col-lg-5 mt-4 mt-lg-0">
+    {% if producer.verified %}
+      <p>Your public page: <a href="{{ producer.get_absolute_url }}">{{ request.get_host }}{{ producer.get_absolute_url }}</a></p>
+    {% else %}
+      <div class="alert alert-light border">
+        <h2 class="h6">Are you a farm?</h2>
+        <p class="mb-2 small">Verified farms get unlimited products, a public page, reviews and veg-box subscriptions.</p>
+        <a class="btn btn-sm btn-outline-success" href="{% url 'producers:apply' %}">Apply for verification</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

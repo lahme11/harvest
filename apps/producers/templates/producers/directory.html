@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}Verified farms{% endblock %}
+{% block content %}
+<div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+  <div>
+    <h1 class="h3 mb-1">Verified farms</h1>
+    <p class="text-muted mb-0">Farms checked by the Harvest team.</p>
+  </div>
+  <form method="get" class="d-flex gap-2">
+    {{ form.county }}
+    <button class="btn btn-outline-success">Filter</button>
+  </form>
+</div>
+<div class="row g-3">
+  {% for producer in page_obj %}
+    <div class="col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm"><div class="card-body">
+        <h2 class="h5"><a class="stretched-link text-reset text-decoration-none" href="{{ producer.get_absolute_url }}">{{ producer.name }}</a></h2>
+        <p class="mb-2"><span class="badge verified-badge">Verified farm</span> <span class="text-muted small">{{ producer.get_county_display }}</span></p>
+        {% if producer.review_count %}<p class="small mb-1"><span class="text-warning">{{ producer.avg_rating|stars }}</span> ({{ producer.review_count }})</p>{% endif %}
+        <p class="small text-muted mb-0">{{ producer.description|truncatewords:25 }}</p>
+      </div></div>
+    </div>
+  {% empty %}
+    <p class="text-muted">No verified farms here yet.</p>
+  {% endfor %}
+</div>
+{% include 'core/includes/pagination.html' %}
+{% endblock %}

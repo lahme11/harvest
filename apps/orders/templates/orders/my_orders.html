@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}Your orders{% endblock %}
+{% block content %}
+<h1 class="h3">Your orders</h1>
+<div class="list-group shadow-sm">
+  {% for order in orders %}
+    <a class="list-group-item list-group-item-action d-flex flex-wrap justify-content-between gap-2" href="{{ order.get_absolute_url }}">
+      <span><strong>{{ order.number }}</strong> · {{ order.producer.name }}<br>
+        <span class="small text-muted">Collect {{ order.slot.start|date:'D j M' }} {{ order.slot.start|time:'H:i' }} at {{ order.point.name }}</span></span>
+      <span class="text-end"><span class="badge text-bg-{% if order.is_open %}primary{% elif order.status == 'collected' %}success{% else %}secondary{% endif %}">{{ order.get_status_display }}</span><br>{{ order.total|euro }}</span>
+    </a>
+  {% empty %}
+    <p class="text-muted">You haven't ordered anything yet.</p>
+  {% endfor %}
+</div>
+{% endblock %}

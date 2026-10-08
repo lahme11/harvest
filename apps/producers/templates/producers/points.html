@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Collection points{% endblock %}
+{% block content %}
+{% with sell_tab='points' %}{% include 'producers/_sell_nav.html' %}{% endwith %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1 class="h3 mb-0">Collection points</h1>
+  <a class="btn btn-success" href="{% url 'producers:point_create' %}">Add a collection point</a>
+</div>
+<p class="text-muted">Buyers pick a slot at one of these places when they check out, and pay you when they collect.</p>
+{% for point in points %}
+  <div class="card shadow-sm mb-3">
+    <div class="card-body">
+      <div class="d-flex flex-wrap justify-content-between gap-2">
+        <div>
+          <h2 class="h5 mb-1">{{ point.name }} {% if not point.active %}<span class="badge text-bg-secondary">Inactive</span>{% endif %}</h2>
+          <p class="mb-1 text-muted">{{ point.address }}, {{ point.get_county_display }} · orders close {{ point.cutoff_hours }} h before each slot</p>
+        </div>
+        <div class="d-flex gap-2 align-items-start">
+          <a class="btn btn-sm btn-outline-secondary" href="{% url 'producers:point_edit' point.pk %}">Edit</a>
+          <form method="post" action="{% url 'producers:point_delete' point.pk %}">{% csrf_token %}
+            <button class="btn btn-sm btn-outline-danger">Delete</button></form>
+        </div>
+      </div>
+      <h3 class="h6 mt-3">Collection times</h3>
+      <ul class="list-group mb-2">
+        {% for rule in point.rules.all %}
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span>{{ rule.get_weekday_display }} {{ rule.start_time|time:'H:i' }}–{{ rule.end_time|time:'H:i' }} ·
+              {{ rule.get_slot_minutes_display }} slots · {{ rule.capacity }} orders each
+              {% if not rule.active %}<span class="badge text-bg-secondary">Inactive</span>{% endif %}</span>
+            <span class="d-flex gap-2">
+              <a class="btn btn-sm btn-link" href="{% url 'producers:rule_edit' rule.pk %}">Edit</a>
+              <form method="post" action="{% url 'producers:rule_delete' rule.pk %}">{% csrf_token %}
+                <button class="btn btn-sm btn-link text-danger">Delete</button></form>
+            </span>
+          </li>
+        {% empty %}
+          <li class="list-group-item text-muted">No collection times yet.</li>
+        {% endfor %}
+      </ul>
+      <a class="btn btn-sm btn-outline-success" href="{% url 'producers:rule_create' point.pk %}">Add collection times</a>
+    </div>
+  </div>
+{% empty %}
+  <div class="alert alert-light border">You haven't added a collection point yet.</div>
+{% endfor %}
+{% endblock %}

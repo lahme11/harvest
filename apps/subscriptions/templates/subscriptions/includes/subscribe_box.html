@@ -1,0 +1,20 @@
+{% load harvest subscription_tags %}
+{% places_left product as left %}
+<div class="card shadow-sm mb-3"><div class="card-body">
+  <p class="mb-2"><strong>{{ product.price|euro }}</strong> {{ product.get_box_frequency_display|lower }}, paid when you collect.
+    <span class="text-muted small">{{ left }} place{{ left|pluralize }} left</span></p>
+  {% if left and box_rules %}
+    <form method="post" action="{% url 'subscriptions:subscribe' product.pk %}">{% csrf_token %}
+      <label class="form-label small" for="rule">Your regular collection time</label>
+      <select class="form-select mb-2" name="rule" id="rule">
+        {% for rule in box_rules %}<option value="{{ rule.pk }}">{{ rule }} · {{ rule.point.name }}</option>{% endfor %}
+      </select>
+      <button class="btn btn-success">Subscribe</button>
+    </form>
+    <p class="small text-muted mt-2 mb-0">Skip a week, pause or cancel any time.</p>
+  {% elif not left %}
+    <p class="mb-0 text-muted">This box is full at the moment.</p>
+  {% else %}
+    <p class="mb-0 text-muted">No collection times are set up yet.</p>
+  {% endif %}
+</div></div>

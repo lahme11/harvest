@@ -1,0 +1,11 @@
+<nav class="nav nav-pills flex-wrap gap-1 mb-4 no-print" aria-label="Selling">
+  {% block sell_nav_items %}
+  <a class="nav-link{% if sell_tab == 'dashboard' %} active{% endif %}" href="{% url 'orders:dashboard' %}">Dashboard</a>
+  <a class="nav-link{% if sell_tab == 'orders' %} active{% endif %}" href="{% url 'orders:producer_orders' %}">Orders</a>
+  <a class="nav-link{% if sell_tab == 'products' %} active{% endif %}" href="{% url 'catalogue:mine' %}">Products</a>
+  {% if request.user.producer.verified %}<a class="nav-link{% if sell_tab == 'subscribers' %} active{% endif %}" href="{% url 'subscriptions:producer' %}">Subscribers</a>{% endif %}
+  <a class="nav-link{% if sell_tab == 'profile' %} active{% endif %}" href="{% url 'producers:edit' %}">Profile</a>
+  <a class="nav-link{% if sell_tab == 'points' %} active{% endif %}" href="{% url 'producers:points' %}">Collection points</a>
+  <a class="nav-link{% if sell_tab == 'apply' %} active{% endif %}" href="{% url 'producers:apply' %}">Verification</a>
+  {% endblock %}
+</nav>

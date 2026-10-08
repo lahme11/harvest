@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Saved food{% endblock %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1 class="h3 mb-0">Saved food</h1>
+  <a href="{% url 'saved:searches' %}">Saved searches</a>
+</div>
+<p class="text-muted">We email you when saved food drops in price or comes back in stock.</p>
+<div class="row g-3">
+  {% for favourite in favourites %}
+    <div class="col-6 col-md-4 col-lg-3">{% include 'catalogue/includes/product_card.html' with product=favourite.product %}</div>
+  {% empty %}
+    <p class="text-muted">Nothing saved yet. Use "Save" on any product.</p>
+  {% endfor %}
+</div>
+{% endblock %}

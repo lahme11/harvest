@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}Farm verification{% endblock %}
+{% block content %}
+{% with sell_tab='apply' %}{% include 'producers/_sell_nav.html' %}{% endwith %}
+<div class="row"><div class="col-lg-7">
+  <h1 class="h3">Farm verification</h1>
+  {% if producer.verified %}
+    <div class="alert alert-success">{{ producer.name }} is a verified farm.</div>
+  {% elif pending %}
+    <div class="alert alert-info">Your application for <strong>{{ pending.farm_name }}</strong> is waiting for review.
+      We'll email you when it's decided.</div>
+  {% else %}
+    {% if latest and latest.status == 'rejected' %}
+      <div class="alert alert-warning"><strong>Your last application wasn't approved.</strong><br>{{ latest.reason }}</div>
+    {% endif %}
+    <p class="text-muted">Tell us about your farm. We check the registration or herd number before approving.</p>
+    <div class="card shadow-sm"><div class="card-body p-4">
+      <form method="post" novalidate>
+        {% csrf_token %}
+        {% include 'core/includes/form.html' %}
+        <button class="btn btn-success">Send application</button>
+      </form>
+    </div></div>
+  {% endif %}
+</div></div>
+{% endblock %}

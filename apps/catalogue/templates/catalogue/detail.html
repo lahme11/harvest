@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load harvest %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block content %}
+<div class="row g-4">
+  <div class="col-lg-7">
+    {% if photos %}
+      <img class="img-fluid rounded shadow-sm mb-2" src="{{ photos.0.image.url }}" alt="{{ product.name }}">
+      {% if photos|length > 1 %}<div class="d-flex gap-2 flex-wrap">{% for photo in photos|slice:'1:' %}
+        <a href="{{ photo.image.url }}"><img src="{{ photo.thumbnail.url }}" width="120" class="rounded" alt="More of {{ product.name }}"></a>{% endfor %}</div>{% endif %}
+    {% else %}
+      <div class="bg-body-secondary rounded d-flex align-items-center justify-content-center text-muted" style="aspect-ratio:4/3">No photo yet</div>
+    {% endif %}
+    <h2 class="h5 mt-4">Ingredients</h2>
+    <p>{% if product.ingredients %}{{ product.ingredients }}{% else %}{{ product.name }} (single ingredient){% endif %}</p>
+    {% if product.allergen_labels %}<p><strong>Allergens:</strong> {{ product.allergen_labels|join:', ' }}</p>{% endif %}
+    {% if product.description %}<h2 class="h5">About</h2><p>{{ product.description|linebreaksbr }}</p>{% endif %}
+  </div>
+  <div class="col-lg-5">
+    {% if not product.is_live %}<div class="alert alert-warning">This product is {{ product.get_status_display|lower }}, so only you can see it.</div>{% endif %}
+    <h1 class="h3 mb-1">{{ product.name }}</h1>
+    <p class="text-muted">{% if product.producer.verified %}<a href="{{ product.producer.get_absolute_url }}">{{ product.producer.name }}</a> <span class="badge verified-badge">Verified farm</span>{% else %}{{ product.producer.name }} · home producer{% endif %}
+      · {{ product.producer.get_county_display }}</p>
+    <p class="h4">{{ product.price|euro }} <span class="h6 text-muted">{{ product.get_unit_display }}</span></p>
+    <p class="small">{% if product.organic %}<span class="badge text-bg-success">Certified organic{% if product.producer.organic_cert_no %} · {{ product.producer.organic_cert_no }}{% endif %}</span> {% endif %}
+      {% if product.season_list %}{% if product.in_season %}<span class="badge text-bg-light border">In season now</span>{% else %}<span class="badge text-bg-light border">Out of season</span>{% endif %}{% endif %}</p>
+    {% if product.is_live and not is_owner %}
+      {% if product.is_box %}
+        {% include 'subscriptions/includes/subscribe_box.html' %}
+      {% elif product.is_sold_out %}
+        <p><span class="badge text-bg-secondary">Sold out</span></p>
+      {% else %}
+        <form method="post" action="{% url 'orders:add' product.pk %}" class="d-flex gap-2 mb-3">{% csrf_token %}
+          <input class="form-control" style="width:5.5rem" type="number" name="quantity" value="1" min="1" max="{{ product.stock }}" aria-label="Quantity">
+          <button class="btn btn-success">Add to basket</button>
+        </form>
+        <p class="small text-muted">{{ product.stock }} available · click and collect · pay when you collect</p>
+      {% endif %}
+    {% endif %}
+    {% if hints %}
+      <div class="alert alert-warning small"><strong>Check your allergens:</strong><ul class="mb-0">{% for hint in hints %}<li>{{ hint }}</li>{% endfor %}</ul></div>
+    {% endif %}
+    {% if is_owner %}<p><a class="btn btn-sm btn-outline-secondary" href="{% url 'catalogue:edit' product.pk %}">Edit product</a></p>
+    {% elif user.is_authenticated %}
+      <div class="d-flex gap-2 mb-3">
+        <form method="post" action="{% url 'saved:toggle' product.pk %}">{% csrf_token %}
+          <button class="btn btn-sm btn-outline-secondary">{% if is_favourite %}♥ Saved{% else %}♡ Save{% endif %}</button></form>
+        {% if product.is_live %}<a class="btn btn-sm btn-link text-muted" href="{% url 'reports:create' product.pk %}">Report</a>{% endif %}
+      </div>
+    {% endif %}
+    {% include 'catalogue/includes/analysis_panel.html' %}
+  </div>
+</div>
+{% endblock %}
